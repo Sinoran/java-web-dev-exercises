@@ -9,6 +9,7 @@ public class MPG {
         int miles = input.nextInt();
         System.out.println("How many gallons of gas have you used while driving?");
         int gallons = input.nextInt();
+        input.close();
         System.out.println("Your miles-per-gallon is " + (miles / gallons) + ".");
     }
 }
