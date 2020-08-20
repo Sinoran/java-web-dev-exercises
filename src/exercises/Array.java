@@ -5,7 +5,7 @@ public class Array {
 
         int[] array = {1, 1, 2, 3, 5, 8};
         for (int j : array) {
-            if (j % 2 != 0) {
+           if (j % 2 != 0) {
                 System.out.println(j);
             }
         }

@@ -1,17 +1,24 @@
-package org.launchcode.java.CountingCharacters;
+package org.launchcode.java.studio.countingcharacters;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Count {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+    public static void main(String[] args) throws FileNotFoundException {
+        //Scanner input = new Scanner(System.in);
         System.out.println("Enter a string: ");
 
-        String quote = input.nextLine();
+        StringBuilder quote = new StringBuilder();
+        File hello = new File("C:\\Program Files\\lc101\\hello.txt");
+        Scanner input = new Scanner(hello);
 
-        char[] charactersInQuote = quote.toLowerCase().toCharArray();
+        while(input.hasNextLine()) {
+            quote.append(input.nextLine());
+        }
+        char[] charactersInQuote = quote.toString().toLowerCase().toCharArray();
 
         HashMap<Character, Integer> characterCount = new HashMap<>();
         for(char c: charactersInQuote) {
